@@ -9,5 +9,6 @@ ANTI-DEBUG PE REVERSE-ENGINEERING
 
 ![Screenshot 2024-12-24 152241](https://github.com/user-attachments/assets/246b148e-a888-4914-bfab-c45527c0cf51)
 ---
- - We see 
+ - Bam there it is staring back at us the reason our debugger goes to shit when executing this executable.
+         # 
 
