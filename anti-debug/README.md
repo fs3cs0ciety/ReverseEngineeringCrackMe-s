@@ -8,5 +8,6 @@ ANTI-DEBUG PE REVERSE-ENGINEERING
 # Upon opening the Fucked PE in BINJA and inspecting the main function in the disassembly:
 
 ![Screenshot 2024-12-24 152241](https://github.com/user-attachments/assets/246b148e-a888-4914-bfab-c45527c0cf51)
+---
+ - We see 
 
-    1.  
