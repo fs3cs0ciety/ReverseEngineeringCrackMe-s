@@ -111,6 +111,7 @@ bool threadfinder::driver_range_check() {
 
 ![Screenshot 2024-12-24 172312](https://github.com/user-attachments/assets/dd0c127c-814b-4a43-afc9-0c1e70cecb3c)
 
+- I guess Im a tranny now!
 ---
 # Credits/Sources
 
