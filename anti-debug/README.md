@@ -69,6 +69,10 @@ int main(void)
 ```
 ---
 
-# Finding The Hidden Thread!
+# Finding The Hidden System Threads!
 
-- 
+- Well now I know, ok I need to find this hidden thread somehow ... Low and behold c++ skills and some help from the lovely GuidedHacking forums. We can create a tool that will basiclly get system threads by using GetSystemTime, which is a funcion that retrieves sys timing info. The tool takes two snapshots of the timing info and compares them to spot if the difference is to large and flags them.
+
+- In the code we are going to pass three FILETIME pointers to the function: idle time, kernel time, and user time. We must initialize two SYSTEM_PROCESS_INFORMATION structs that store info about a process, such as the NUMBER OF THREADS USED!!!!
+
+- Mainly The two snapshots are used to calculate any spotted differences between the timing info by iterating through the process of both snapshots and matches them. The CPU time is being stored and then we are tracking the timing differences for each running process and then storing the overall CPU time difference by adding execution time from hidden processes. There is specific thresholds that cannot be exceeded or you will be flagged for hiding system threads.  
