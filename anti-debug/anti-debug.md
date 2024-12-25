@@ -106,8 +106,14 @@ bool threadfinder::driver_range_check() {
 
 
 ![Screenshot 2024-12-24 171602](https://github.com/user-attachments/assets/5d6ea3a3-8f3c-4049-ba43-c062dcbdba09)
+
+- Next I started the program along with the main.exe as well and retrieved the flag!!!
+
+![Screenshot 2024-12-24 172312](https://github.com/user-attachments/assets/dd0c127c-814b-4a43-afc9-0c1e70cecb3c)
+
 ---
 # Credits/Sources
 
 - https://github.com/weak1337/SystemThreadFinder/tree/main
 - https://guidedhacking.com
+- https://humzak711.github.io/
