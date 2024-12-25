@@ -15,5 +15,5 @@ ANTI-DEBUG PE REVERSE-ENGINEERING
  
  - Why the fuck would windows let us use these api's??? Well, see here is why it exists: Whenever you attach a debugger to a remote process a new thread is created and if it was a normal thread the debugger would endlessly loop as it attempts to stop its own execution. Under the hood when a debugging thread is created Windows NtSetInformationThread with the flag set to (1) allowing the process to be debugged and continue as aspected. 
 
-   -- 
+               -- 
  - 
