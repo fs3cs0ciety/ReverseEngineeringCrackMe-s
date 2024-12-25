@@ -1,7 +1,7 @@
 ANTI-DEBUG PE REVERSE-ENGINEERING
 ---
 
-* First off let me just say what a nigger humza is for making this PE wicked in a debugger, and it was my first attempt at anti-debug analysis. The learning process was amazing though, cant knock that.
+* First off let me just say that ive been up for days trying to solve this fuckin crackme humza made. He is fucked for making this PE wicked in a debugger, and it was my first attempt at anti-debug analysis. The learning process was amazing though, cant knock that.
 
 ---
 
