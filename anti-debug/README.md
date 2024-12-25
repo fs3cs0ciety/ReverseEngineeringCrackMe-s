@@ -75,4 +75,27 @@ int main(void)
 
 - In the code we are going to pass three FILETIME pointers to the function: idle time, kernel time, and user time. We must initialize two SYSTEM_PROCESS_INFORMATION structs that store info about a process, such as the NUMBER OF THREADS USED!!!!
 
-- Mainly The two snapshots are used to calculate any spotted differences between the timing info by iterating through the process of both snapshots and matches them. The CPU time is being stored and then we are tracking the timing differences for each running process and then storing the overall CPU time difference by adding execution time from hidden processes. There is specific thresholds that cannot be exceeded or you will be flagged for hiding system threads.  
+- Mainly The two snapshots are used to calculate any spotted differences between the timing info by iterating through the process of both snapshots and matches them. The CPU time is being stored and then we are tracking the timing differences for each running process and then storing the overall CPU time difference by adding execution time from hidden processes. There is specific thresholds that cannot be exceeded or you will be flagged for hiding system threads.
+---
+
+# Driver Range Check Function
+```
+bool threadfinder::driver_range_check() {
+	int* proc_list = nt::get_proc_list();
+	SYSTEM_PROCESS_INFORMATION* proc = 0;
+	for (proc = (SYSTEM_PROCESS_INFORMATION*)proc_list; proc->NextOffset != 0; proc = (SYSTEM_PROCESS_INFORMATION*)((char*)proc + proc->NextOffset)) {
+		if (proc->ProcessId == 4) {
+			for (int j = 0; j < proc->ThreadCount; j++) {
+				if (!is_in_range((uintptr_t)proc->ThreadInfos[j].StartAddress)) {
+					printf("Detection: %p not in range!", (uintptr_t)proc->ThreadInfos[j].StartAddress);
+					return true;
+				}
+
+			}
+			break;
+		}
+	}
+	return false;
+}
+```
+
